@@ -1,0 +1,467 @@
+/* Estilos generales y animación */
+@keyframes Aparicion {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    animation: Aparicion 1.5s ease-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #2c2a2a;
+    margin: 0;
+    padding: 0;
+}
+
+.Contenedoruniversal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(115, 115, 209);
+}
+
+.Encabezado {  
+    background: linear-gradient(90deg, #bd0202, #cc0000, #dd0202); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    height: 500px;
+    width: 96.9%; /* Ajuste para que ocupe todo el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column; /* Cambiar la dirección del flex para apilar los elementos verticalmente */
+}
+
+.Encabezado h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.MensajeB {
+   margin-right: 350px;
+}
+
+/* Estilos para la cabecera y menús */
+.Cabecera {
+    background-color: #000000;
+    margin-right: 325px;
+    margin-bottom: 55px;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: visible; /* Permitir que los elementos sobresalgan */
+    width: 750px;
+    height: 300px;
+    border-top: 2.5px solid silver; /* Borde plateado en la parte superior */
+    border-bottom: 2.5px solid silver; /* Borde plateado en la parte inferior */
+}
+
+/* Estilos para los iconos junto al buscador */
+.Logos {
+    margin-left: 250px; /* Ajuste de posición de los logos */
+}
+
+.Logos a {
+    margin: 0 10px;
+}
+
+.Logos img {
+    height: 80px;
+    transition: transform 0.3s ease-out;
+}
+
+.Logos img:hover {
+    transform: scale(1.3);
+}
+
+/* Estilos para el buscador */
+.Buscador {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end; /* Alineación hacia la derecha */
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 250px; /* Ajuste del margen derecho */
+    z-index: 3; /* Aumentar el z-index para estar sobre los menús */
+    position: relative; /* Añadir posición relativa para manejar el z-index */
+}
+
+.Buscar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 50px; /* Forma circular del buscador */
+    overflow: hidden;
+    padding: 5px;
+    background-color: #000000;
+}
+
+.Buscar input {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 0;
+    height: 40px;
+    transition: width 0.3s ease;
+}
+
+.Buscar:hover input {
+    width: 240px;
+}
+
+.Boton {
+    width: 50px;
+    height: 50px; /* Ajuste para hacer circular el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: #e41717;
+    border-radius: 50%; /* Hacer el botón circular */
+    border: none;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+}
+
+.Boton img {
+    width: 30px;
+    height: 30px;
+}
+
+.Boton:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #e97070;
+}
+
+/* Estilos para los menús azul y rojo */
+.Menuazul {
+    background-color: #0969d6;
+    border-radius: 30px 0 0 30px;
+    padding: 10px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+}
+
+/* Estilos para los íconos del menú azul */
+.Menuazul .MenuH li a img {
+    width: 20px; /* Ajustar el tamaño del ícono del menú azul aquí */
+    height: 20px; /* Ajustar el tamaño del ícono del menú azul aquí */
+}
+
+.Menuazul:hover {
+    transform: translateY(0);
+}
+
+.MenuHorizontal {
+    right: 0;
+    border-radius: 0 30px 30px 0;
+    background-color: #ec0000;
+    padding: 10px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+    font-family: 'Press Start 2P', cursive; /* Fuente relacionada con Nintendo */
+}
+
+.Menuazul .MenuH li a:hover {
+    transform: scale(1.1);
+    color: #0000ff; /* Color azul estilo Nintendo */
+    margin-left: 20px;
+    transform: translateX(-50%);
+}
+
+.MenuHorizontal .MenuH li a:hover {
+    transform: scale(1.1);
+    color: #ff0000; /* Color rojo estilo Nintendo */
+    margin-left: 20px;
+    transform: translateX(-50%);
+}
+
+.MenuHorizontal:hover {
+    transform: translateY(0);
+}
+
+.Menuazul, .MenuHorizontal {
+    height: calc(100% + 40px);
+}
+
+.Menuazul .MenuH,
+.MenuHorizontal .MenuH {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.Menuazul .MenuH li,
+.MenuHorizontal .MenuH li {
+    margin: 10px 0;
+}
+
+.Menuazul .MenuH li a,
+.MenuHorizontal .MenuH li a {
+    text-decoration: none;
+    color: #000000;
+    transition: transform 0.3s ease;
+    font-family: 'Press Start 2P', cursive; /* Fuente relacionada con Nintendo */
+    font-size: 14px; /* Reducir tamaño de fuente */
+    padding: 5px; /* Reducir padding */
+}
+
+.Menuazul .MenuH li a:hover {
+    transform: scale(1.1);
+    color: #001aff; 
+    display: block;
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.MenuHorizontal .MenuH li a:hover {
+    transform: scale(1.1);
+    color: #ff0000; 
+    display: block;
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para los submenús */
+.MenuH li:hover > .SubmenuH {
+    display: block;
+}
+
+.MenuH li {
+    position: relative; /* Añadir posición relativa para submenús absolutos */
+}
+
+.SubmenuH {
+    display: none;
+    position: absolute;
+    background-color: #af00db; /* Fondo blanco */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: 0;
+    left: auto; /* Posición automática a la derecha */
+    right: 100%; /* Asegurar que esté alineado a la derecha */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Sutil sombra */
+    border-radius: 6px; /* Bordes redondeados */
+    z-index: 100; /* Asegurar que esté sobre otros elementos */
+    min-width: 160px; /* Ancho mínimo ajustable */
+    animation: SubmenuAparicion 0.1s ease; /* Animación de aparición */
+    opacity: 0; /* Inicialmente oculto */
+    pointer-events: none; /* No interactuable hasta que se muestre */
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out; /* Transición suave */
+}
+
+.MenuH li:hover > .SubmenuH {
+    display: block;
+    opacity: 1; /* Mostrar gradualmente */
+    pointer-events: auto; /* Activar interacción */
+}
+
+.MenuH li:hover > .SubmenuH {
+    display: block;
+    opacity: 1; /* Mostrar gradualmente */
+    transform: translateX(10px); /* Ajustar posición */
+    pointer-events: auto; /* Activar interacción */
+}
+
+.SubmenuH li {
+    margin: 8px 0;
+    transition: transform 0.2s ease-in-out; /* Transición suave */
+}
+
+.SubmenuH li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #2c2a2a; /* Texto negro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.SubmenuH li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con transparencia */
+    color: #0000ff; /* Texto azul al pasar el mouse */
+}
+
+.Personajes {
+    padding: 20px;
+    background-color: transparent;
+    position: absolute;
+    height: 250px;
+    width: 450px;
+    right: 0;
+    top: 100px; /* Ajuste de posición para dejar espacio al h1 */
+}
+
+.Personajes img {
+   width: 450px;
+   height: 250px;
+}
+
+/* Otros estilos de diseño */
+.ContenidoCentral {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.Slider {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.ContenedorSlider {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.Slide {
+    flex: 0 0 auto;
+}
+
+.Slide img {
+    width: 100%;
+    max-height: 300px;
+    margin-right: 10px;
+}
+
+.CuadroDeContenido {
+    margin-bottom: 20px;
+}
+
+.CuadroContenido h1,
+.CuadroContenido h2,
+.CuadroContenido h3 {
+    margin: 10px 0;
+}
+
+.TarjetaPromocional {
+    background-color: #e3e3e3;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.TarjetaPromocional img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.TarjetaQueGira {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TargetaG {
+    display: flex;
+    transition: transform 0.6s;
+}
+
+.TargetaG:hover {
+    transform: rotateY(180deg);
+}
+
+.Fase1 img,
+.Fase2 img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.ZonaInferior {
+    background-color: #E60012;
+    color: #fff;
+    padding: 20px;
+}
+
+.Oleje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Wave1,
+.Wave2,
+.Wave3 {
+    height: 10px;
+    background: #fff;
+    width: 100px;
+    margin: 0 5px;
+}
+
+.Mario {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Mario img {
+    height: 100px;
+}
+
+.ContenidoFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+.DerechosAutor,
+.RedesSociales,
+.WebDesigner {
+    margin: 10px 0;
+}
+
+.Socialmedia a img {
+    height: 30px;
+    margin: 0 10px;
+}
